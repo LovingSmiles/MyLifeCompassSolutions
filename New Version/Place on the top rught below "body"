@@ -1,0 +1,61 @@
+
+Place before </body>
+
+<div id="site-header" data-include="header.html"></div>
+<script src="include.js" defer></script>
+<script src="mood-switcher.js" defer></script>
+<script src="lifecompass.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+put in <head>
+    <link rel="stylesheet" href="lcp-nav.css">
+    <script src="lcp-nav.js" defer></script>
+
+    Search bar
+    <link rel="stylesheet" href="/assets/search.css">
+<script>
+  // Option A: point to a JSON list of your pages (recommended)
+  window.LCP_SEARCH_CONFIG = { indexUrl: "/pages.json", cacheVersion: "v1" };
+
+  // Option B (fallback): if no pages.json, it will auto-read links in your <nav> that have data-path=
+</script>
+<script defer src="/assets/search.js"></script>
+
+---------------------------
+
+<!-- Mission statement (drop-in) -->
+<section id="mission" class="card" style="max-width:900px;margin:24px auto;text-align:center;padding:20px;">
+  <h3 style="margin-top:0;">Privacy & Purpose - My Life Compass Solutions</h3>
+  <p>At My Life Compass Solutions, we believe your memories, reflections, and growth belong to you - not to the cloud, not to advertisers, and not to big tech. Our mission is to empower individuals to live with purpose, privacy, and peace of mind by giving them full control over their personal data.</p>
+  <p>Millions of people upload photos, journals, and personal content to social media or big tech platforms simply because their devices run out of space. They trade privacy for storage, often without realizing it. My Life Compass Solutions changes that.</p>
+  <p>We’re building a platform designed to work anywhere, on any device - even offline - allowing users to store their progress, gratitude entries, goals, and life reflections locally first. When an internet connection becomes available, the system safely syncs using encryption so your information remains private, secure, and entirely yours.</p>
+  <p>We don’t track your habits, sell your data, or show you ads. We focus on what matters most: helping you organize your life, reflect on your journey, and move toward peace and clarity. Whether you’re journaling, uploading photos, setting goals, or reviewing your progress, everything you create belongs solely to you.</p>
+  <p>By design, My Life Compass Solutions provides a simple, inclusive alternative for those who don’t have high-end devices or large storage capacities. Our platform empowers everyone - regardless of technology or income - to take ownership of their digital lives without giving up privacy or functionality.</p>
+  <p class="muted" style="margin-top:8px;">Your story is sacred. Your data is protected. Your life is yours to navigate.</p>
+</section>
+
+<!-- Bottom breathing room -->
+<div style="height:96px;"></div>
+
+-----------------------------
+
+Theme Settings page can control other pages
+<script src="assets/theme-applier.js"></script>
+<link rel="stylesheet" href="assets/theme.css">
+<script src="assets/theme.js" defer></script>
+<script>
+  // Auto-apply the saved theme for THIS page (or fall back to sitewide),
+  // with default color = light ocean blue.
+  document.addEventListener('DOMContentLoaded', () => {
+    LCPTheme.init({
+      defaultColor: '#7fd3f7',
+      autoApply: true
+      // no mount needed here — we’re not showing controls on content pages
+    });
+  });
+</script>
+
+----------------------------
+
+Possibly create a dietary.html and have a spot in Physical.html to come into the page
